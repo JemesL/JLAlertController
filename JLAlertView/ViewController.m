@@ -45,8 +45,10 @@
 //    [self presentViewController:alert animated:YES completion:nil];
     
     JLAlertController *jlAlert = [JLAlertController alertControllerWithTitle:@"My Alert" message:@"This is an alert!" preferredStyle:JLAlertControllerStyleAlert];
-    
     [self presentViewController:jlAlert animated:YES completion:nil];
+
+
+    
 }
 
 @end

@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, JLAlertControllerStyle) {
 - (void)addTextFieldWithConfigurationHandler:(void (^)(UITextField *textFiled))configurationHandler;
 @property (nonatomic, readonly) NSArray<UITextField *> *textFields;
 
-@property (nonatomic, copy) NSString *title;
+//@property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *message;
 
 @property (nonatomic, readonly) JLAlertControllerStyle preferredStyle;

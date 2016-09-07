@@ -11,6 +11,7 @@
 
 @property (nonatomic, copy) void(^handler)(JLAlertAction *action);
 
+
 @end
 @implementation JLAlertAction
 
@@ -36,6 +37,7 @@
 
 @interface JLAlertController()
 @property (nonatomic, strong) UIView *alertBGView;
+@property (nonatomic, strong) UIView *darkBGView;
 @end
 @implementation JLAlertController
 
@@ -52,7 +54,10 @@
         self.title = title;
         self.message = message;
         _preferredStyle = preferredStyle;
-        self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        self.modalPresentationStyle = UIModalPresentationOverFullScreen;
+        self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        
         [self setupViews];
     }
     return self;
@@ -66,20 +71,38 @@
     _actions = actionsArrM.copy;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    self.view.backgroundColor = [UIColor blackColor];
-    self.view.alpha = 0;
-    self.view.userInteractionEnabled = YES;
+    [super viewWillAppear:animated];
     
+    
+//    self.view.alpha = 0;
+//    self.view.userInteractionEnabled = YES;
+
     [UIView animateWithDuration:0.25 animations:^{
-        self.view.alpha = 0.3;
+        self.darkBGView.alpha = 0.3;
     }];
 }
 
 - (void)setupViews
 {
-    self.alertBGView = [UIView alloc] initWithFrame:<#(CGRect)#>
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    self.darkBGView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.darkBGView];
+    self.darkBGView.backgroundColor = [UIColor blackColor];
+    self.darkBGView.alpha = 0;
+    
+    self.alertBGView = [[UIView alloc] initWithFrame:CGRectZero];
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 @end
