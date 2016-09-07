@@ -7,6 +7,9 @@
 //
 
 #import "JLAlertController.h"
+#import "UIColor+Factory.h"
+#import "Masonry.h"
+#import "JLAlertView.h"
 @interface JLAlertAction()
 
 @property (nonatomic, copy) void(^handler)(JLAlertAction *action);
@@ -36,8 +39,10 @@
 
 
 @interface JLAlertController()
-@property (nonatomic, strong) UIView *alertBGView;
+@property (nonatomic, strong) JLAlertView *alertBGView;
 @property (nonatomic, strong) UIView *darkBGView;
+
+
 @end
 @implementation JLAlertController
 
@@ -63,37 +68,16 @@
     return self;
 }
 
-- (void)addAction:(JLAlertAction *)action
-{
-    NSMutableArray *actionsArrM = [[NSMutableArray alloc] initWithArray:self.actions];
-    [actionsArrM addObject:action];
-    
-    _actions = actionsArrM.copy;
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    
-//    self.view.alpha = 0;
-//    self.view.userInteractionEnabled = YES;
-
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.darkBGView.alpha = 0.3;
-    }];
-}
+        self.alertBGView.alpha = 1;
+        self.alertBGView.transform = CGAffineTransformIdentity;
 
-- (void)setupViews
-{
-    self.view.backgroundColor = [UIColor clearColor];
-    
-    self.darkBGView = [[UIView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:self.darkBGView];
-    self.darkBGView.backgroundColor = [UIColor blackColor];
-    self.darkBGView.alpha = 0;
-    
-    self.alertBGView = [[UIView alloc] initWithFrame:CGRectZero];
+    } completion:nil];
 }
 
 - (void)viewDidLoad
@@ -103,6 +87,38 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self dismissViewControllerAnimated:YES completion:nil];
     });
+}
+
+
+
+- (void)setupViews
+{
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    self.darkBGView = [[UIView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:self.darkBGView];
+    self.darkBGView.backgroundColor = [UIColor blackColor];
+    self.darkBGView.userInteractionEnabled = YES;
+    self.darkBGView.alpha = 0;
+    
+    self.alertBGView = [[JLAlertView alloc] initWithFrame:CGRectZero];
+    self.alertBGView.alpha = 0;
+    self.alertBGView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+    [self.view addSubview:self.alertBGView];
+    [self.alertBGView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(@270);
+        make.centerY.centerX.equalTo(self.view);
+    }];
+    
+    
+}
+
+- (void)addAction:(JLAlertAction *)action
+{
+    NSMutableArray *actionsArrM = [[NSMutableArray alloc] initWithArray:self.actions];
+    [actionsArrM addObject:action];
+    
+    _actions = actionsArrM.copy;
 }
 
 @end
