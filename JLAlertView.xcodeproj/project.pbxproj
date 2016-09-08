@@ -20,6 +20,7 @@
 		687A533A1D815F0200A378BC /* JLAlertColViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 687A53391D815F0200A378BC /* JLAlertColViewCell.m */; };
 		68A8840E1D8003F80050C412 /* UIColor+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A8840D1D8003F80050C412 /* UIColor+Factory.m */; };
 		68A884121D800F540050C412 /* JLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A884111D800F540050C412 /* JLAlertView.m */; };
+		70CA81FE1D819D3D000ABDC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70CA81FD1D819D3D000ABDC9 /* LaunchScreen.storyboard */; };
 		92BEBD1A28A7989699345AC5 /* libPods-JLAlertView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B20DAC72C34694478A00B3F /* libPods-JLAlertView.a */; };
 		C2F40C2EF3B25120524DF389 /* libPods-JLAlertViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED96A1BC0995FECA17BD199 /* libPods-JLAlertViewTests.a */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		68A8840D1D8003F80050C412 /* UIColor+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Factory.m"; sourceTree = "<group>"; };
 		68A884101D800F540050C412 /* JLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAlertView.h; sourceTree = "<group>"; };
 		68A884111D800F540050C412 /* JLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAlertView.m; sourceTree = "<group>"; };
+		70CA81FD1D819D3D000ABDC9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D2871D3B31986933734AB7 /* libPods-JLAlertViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JLAlertViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A147B552F50A8A29789FEB65 /* Pods-JLAlertViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertViewTests/Pods-JLAlertViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4BB8E5C834D57947A6B6117 /* Pods-JLAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertView/Pods-JLAlertView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				6823161B1D7FB86D00E1F312 /* ViewController.m */,
 				68A8840F1D800F170050C412 /* JLAlertController */,
 				6823161D1D7FB86D00E1F312 /* Main.storyboard */,
+				70CA81FD1D819D3D000ABDC9 /* LaunchScreen.storyboard */,
 				682316201D7FB86D00E1F312 /* Assets.xcassets */,
 				682316221D7FB86D00E1F312 /* LaunchScreen.storyboard */,
 				682316251D7FB86D00E1F312 /* Info.plist */,
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				682316241D7FB86D00E1F312 /* LaunchScreen.storyboard in Resources */,
+				70CA81FE1D819D3D000ABDC9 /* LaunchScreen.storyboard in Resources */,
 				682316211D7FB86D00E1F312 /* Assets.xcassets in Resources */,
 				6823161F1D7FB86D00E1F312 /* Main.storyboard in Resources */,
 			);
