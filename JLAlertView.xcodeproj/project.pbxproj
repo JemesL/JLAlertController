@@ -13,7 +13,6 @@
 		6823161C1D7FB86D00E1F312 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823161B1D7FB86D00E1F312 /* ViewController.m */; };
 		6823161F1D7FB86D00E1F312 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6823161D1D7FB86D00E1F312 /* Main.storyboard */; };
 		682316211D7FB86D00E1F312 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682316201D7FB86D00E1F312 /* Assets.xcassets */; };
-		682316241D7FB86D00E1F312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682316221D7FB86D00E1F312 /* LaunchScreen.storyboard */; };
 		6823162F1D7FB86D00E1F312 /* JLAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823162E1D7FB86D00E1F312 /* JLAlertViewTests.m */; };
 		6823163A1D7FB86E00E1F312 /* JLAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 682316391D7FB86E00E1F312 /* JLAlertViewUITests.m */; };
 		682316491D7FC41F00E1F312 /* JLAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682316481D7FC41F00E1F312 /* JLAlertController.m */; };
@@ -21,6 +20,7 @@
 		68A8840E1D8003F80050C412 /* UIColor+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A8840D1D8003F80050C412 /* UIColor+Factory.m */; };
 		68A884121D800F540050C412 /* JLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A884111D800F540050C412 /* JLAlertView.m */; };
 		70CA81FE1D819D3D000ABDC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70CA81FD1D819D3D000ABDC9 /* LaunchScreen.storyboard */; };
+		70CA827F1D81BA9E000ABDC9 /* JLSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CA827E1D81BA9E000ABDC9 /* JLSheetView.m */; };
 		92BEBD1A28A7989699345AC5 /* libPods-JLAlertView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B20DAC72C34694478A00B3F /* libPods-JLAlertView.a */; };
 		C2F40C2EF3B25120524DF389 /* libPods-JLAlertViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED96A1BC0995FECA17BD199 /* libPods-JLAlertViewTests.a */; };
 /* End PBXBuildFile section */
@@ -56,7 +56,6 @@
 		6823161B1D7FB86D00E1F312 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6823161E1D7FB86D00E1F312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		682316201D7FB86D00E1F312 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		682316231D7FB86D00E1F312 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		682316251D7FB86D00E1F312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6823162A1D7FB86D00E1F312 /* JLAlertViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLAlertViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6823162E1D7FB86D00E1F312 /* JLAlertViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLAlertViewTests.m; sourceTree = "<group>"; };
@@ -73,6 +72,8 @@
 		68A884101D800F540050C412 /* JLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAlertView.h; sourceTree = "<group>"; };
 		68A884111D800F540050C412 /* JLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAlertView.m; sourceTree = "<group>"; };
 		70CA81FD1D819D3D000ABDC9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70CA827D1D81BA9E000ABDC9 /* JLSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLSheetView.h; sourceTree = "<group>"; };
+		70CA827E1D81BA9E000ABDC9 /* JLSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLSheetView.m; sourceTree = "<group>"; };
 		74D2871D3B31986933734AB7 /* libPods-JLAlertViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JLAlertViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A147B552F50A8A29789FEB65 /* Pods-JLAlertViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertViewTests/Pods-JLAlertViewTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4BB8E5C834D57947A6B6117 /* Pods-JLAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertView/Pods-JLAlertView.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +141,6 @@
 				6823161D1D7FB86D00E1F312 /* Main.storyboard */,
 				70CA81FD1D819D3D000ABDC9 /* LaunchScreen.storyboard */,
 				682316201D7FB86D00E1F312 /* Assets.xcassets */,
-				682316221D7FB86D00E1F312 /* LaunchScreen.storyboard */,
 				682316251D7FB86D00E1F312 /* Info.plist */,
 				682316141D7FB86D00E1F312 /* Supporting Files */,
 				68A8840C1D8003F80050C412 /* UIColor+Factory.h */,
@@ -182,6 +182,8 @@
 				682316481D7FC41F00E1F312 /* JLAlertController.m */,
 				68A884101D800F540050C412 /* JLAlertView.h */,
 				68A884111D800F540050C412 /* JLAlertView.m */,
+				70CA827D1D81BA9E000ABDC9 /* JLSheetView.h */,
+				70CA827E1D81BA9E000ABDC9 /* JLSheetView.m */,
 				687A53381D815F0200A378BC /* JLAlertColViewCell.h */,
 				687A53391D815F0200A378BC /* JLAlertColViewCell.m */,
 			);
@@ -322,7 +324,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682316241D7FB86D00E1F312 /* LaunchScreen.storyboard in Resources */,
 				70CA81FE1D819D3D000ABDC9 /* LaunchScreen.storyboard in Resources */,
 				682316211D7FB86D00E1F312 /* Assets.xcassets in Resources */,
 				6823161F1D7FB86D00E1F312 /* Main.storyboard in Resources */,
@@ -475,6 +476,7 @@
 			files = (
 				68A8840E1D8003F80050C412 /* UIColor+Factory.m in Sources */,
 				682316491D7FC41F00E1F312 /* JLAlertController.m in Sources */,
+				70CA827F1D81BA9E000ABDC9 /* JLSheetView.m in Sources */,
 				687A533A1D815F0200A378BC /* JLAlertColViewCell.m in Sources */,
 				6823161C1D7FB86D00E1F312 /* ViewController.m in Sources */,
 				68A884121D800F540050C412 /* JLAlertView.m in Sources */,
@@ -521,14 +523,6 @@
 				6823161E1D7FB86D00E1F312 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		682316221D7FB86D00E1F312 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				682316231D7FB86D00E1F312 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

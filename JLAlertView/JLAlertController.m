@@ -99,6 +99,22 @@
     self.darkBGView.userInteractionEnabled = YES;
     self.darkBGView.alpha = 0;
     
+    switch (self.preferredStyle) {
+        case JLAlertControllerStyleAlert:
+            [self setupAlertView];
+            break;
+        case JLAlertControllerStyleActionSheet:
+//            self
+            break;
+        default:
+            break;
+    }
+    
+    
+}
+
+- (void)setupAlertView
+{
     self.alertView = [[JLAlertView alloc] initWithFrame:CGRectZero title:self.title message:self.message];
     self.alertView.alpha = 0;
     self.alertView.transform = CGAffineTransformMakeScale(1.2, 1.2);
@@ -113,9 +129,9 @@
         action.handler(action);
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     };
-    
-    
 }
+
+- (void)setupSheetView
 
 - (void)addAction:(JLAlertAction *)action
 {

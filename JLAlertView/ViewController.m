@@ -24,22 +24,22 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-//    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"123"
-//                                                                   message:@"123"
-//                                                            preferredStyle:UIAlertControllerStyleAlert];
-//    
-//    for (int i = 0 ; i < 1 ; i++) {
-//        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-//                                                              handler:^(UIAlertAction * _Nonnull action) {
-//                                                                  NSLog(@"123");
-//                                                              }];
-//        [alert addAction:defaultAction];
-//
-//    }
-//    
-//    [self presentViewController:alert animated:YES completion:nil];
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"This is my honey!"
+                                                                   message:@"哈哈哈哈"
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
     
-    JLAlertController *jlAlert = [JLAlertController alertControllerWithTitle:@"Hello!" message:@"You are my World." preferredStyle:JLAlertControllerStyleAlert];
+    for (int i = 0 ; i < 2 ; i++) {
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * _Nonnull action) {
+                                                                  NSLog(@"123");
+                                                              }];
+        [alert addAction:defaultAction];
+
+    }
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    JLAlertController *jlAlert = [JLAlertController alertControllerWithTitle:@"Hello!" message:@"." preferredStyle:JLAlertControllerStyleAlert];
     
     JLAlertAction *action = [JLAlertAction actionWithTitle:@"OK" style:JLAlertActionStyleDefault handler:^(JLAlertAction *action) {
         [self didTapOnOKBTN];
@@ -51,10 +51,10 @@
     }];
     [jlAlert addAction:action2];
 
-    JLAlertAction *action3 = [JLAlertAction actionWithTitle:@"OK" style:JLAlertActionStyleDefault handler:^(JLAlertAction *action) {
-        [self didTapOnOKBTN];
-    }];
-    [jlAlert addAction:action3];
+//    JLAlertAction *action3 = [JLAlertAction actionWithTitle:@"OK" style:JLAlertActionStyleDefault handler:^(JLAlertAction *action) {
+//        [self didTapOnOKBTN];
+//    }];
+//    [jlAlert addAction:action3];
     
     [self presentViewController:jlAlert animated:YES completion:nil];
 }

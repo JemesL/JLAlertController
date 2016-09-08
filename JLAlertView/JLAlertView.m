@@ -100,7 +100,7 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
 #pragma mark -SetupView
 - (void)setupView
 {
-    [self layoutIfNeeded];
+//    [self layoutIfNeeded];
     [self setupContentScrollView];
     [self setupActionColView];
 }
@@ -124,15 +124,6 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
     
     [self.contentScrollView addSubview:self.titleLabel];
     [self.contentScrollView addSubview:self.messageLabel];
-    
-//    UIView *line = [[UIView alloc] initWithFrame:CGRectZero];
-//    line.backgroundColor = [UIColor colorGrayLine];
-//    [self addSubview:line];
-//    [line mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.height.equalTo(@1);
-//        make.left.right.equalTo(self);
-//        make.bottom.equalTo(self.contentScrollView);
-//    }];
 }
 
 - (void)setupActionColView
