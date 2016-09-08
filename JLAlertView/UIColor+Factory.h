@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (Factory)
+
 + (UIColor *)colorAlertText;
 + (UIColor *)colorAlertBG;
++ (UIColor *)colorGrayLine;
+
 @end

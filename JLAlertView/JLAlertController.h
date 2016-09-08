@@ -19,7 +19,8 @@ typedef NS_ENUM(NSInteger, JLAlertControllerStyle) {
     JLAlertControllerStyleAlert
 };
 
-
+@protocol JLAlertAction
+@end
 @interface JLAlertAction : NSObject <NSCopying>
 
 + (instancetype)actionWithTitle:(NSString *)title style:(JLAlertActionStyle)style handler:(void (^)(JLAlertAction *action))handler;
@@ -31,6 +32,8 @@ typedef NS_ENUM(NSInteger, JLAlertControllerStyle) {
 @end
 
 
+@protocol JLAlertController
+@end
 @interface JLAlertController : UIViewController
 
 + (instancetype)alertControllerWithTitle:(NSString *)title message:(NSString *)message preferredStyle:(JLAlertControllerStyle)preferredStyle;

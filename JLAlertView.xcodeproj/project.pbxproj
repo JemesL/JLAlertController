@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E649AABAB4EB259BA958823 /* libPods-JLAlertViewUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D2871D3B31986933734AB7 /* libPods-JLAlertViewUITests.a */; };
 		682316161D7FB86D00E1F312 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 682316151D7FB86D00E1F312 /* main.m */; };
 		682316191D7FB86D00E1F312 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 682316181D7FB86D00E1F312 /* AppDelegate.m */; };
 		6823161C1D7FB86D00E1F312 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823161B1D7FB86D00E1F312 /* ViewController.m */; };
@@ -16,6 +17,11 @@
 		6823162F1D7FB86D00E1F312 /* JLAlertViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823162E1D7FB86D00E1F312 /* JLAlertViewTests.m */; };
 		6823163A1D7FB86E00E1F312 /* JLAlertViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 682316391D7FB86E00E1F312 /* JLAlertViewUITests.m */; };
 		682316491D7FC41F00E1F312 /* JLAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682316481D7FC41F00E1F312 /* JLAlertController.m */; };
+		687A533A1D815F0200A378BC /* JLAlertColViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 687A53391D815F0200A378BC /* JLAlertColViewCell.m */; };
+		68A8840E1D8003F80050C412 /* UIColor+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A8840D1D8003F80050C412 /* UIColor+Factory.m */; };
+		68A884121D800F540050C412 /* JLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68A884111D800F540050C412 /* JLAlertView.m */; };
+		92BEBD1A28A7989699345AC5 /* libPods-JLAlertView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B20DAC72C34694478A00B3F /* libPods-JLAlertView.a */; };
+		C2F40C2EF3B25120524DF389 /* libPods-JLAlertViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED96A1BC0995FECA17BD199 /* libPods-JLAlertViewTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09BAFF874ECC373454C3F50A /* Pods-JLAlertViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertViewTests/Pods-JLAlertViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		0E57AD39EE4411E2C24019E7 /* Pods-JLAlertViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertViewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertViewUITests/Pods-JLAlertViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0ED96A1BC0995FECA17BD199 /* libPods-JLAlertViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JLAlertViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17EE8AB741859148888844D9 /* Pods-JLAlertView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertView.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertView/Pods-JLAlertView.release.xcconfig"; sourceTree = "<group>"; };
+		4B20DAC72C34694478A00B3F /* libPods-JLAlertView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JLAlertView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		682316111D7FB86D00E1F312 /* JLAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		682316151D7FB86D00E1F312 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		682316171D7FB86D00E1F312 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +65,16 @@
 		6823163B1D7FB86E00E1F312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682316471D7FC41F00E1F312 /* JLAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAlertController.h; sourceTree = "<group>"; };
 		682316481D7FC41F00E1F312 /* JLAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAlertController.m; sourceTree = "<group>"; };
+		687A53381D815F0200A378BC /* JLAlertColViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAlertColViewCell.h; sourceTree = "<group>"; };
+		687A53391D815F0200A378BC /* JLAlertColViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAlertColViewCell.m; sourceTree = "<group>"; };
+		68A8840C1D8003F80050C412 /* UIColor+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Factory.h"; sourceTree = "<group>"; };
+		68A8840D1D8003F80050C412 /* UIColor+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Factory.m"; sourceTree = "<group>"; };
+		68A884101D800F540050C412 /* JLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAlertView.h; sourceTree = "<group>"; };
+		68A884111D800F540050C412 /* JLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAlertView.m; sourceTree = "<group>"; };
+		74D2871D3B31986933734AB7 /* libPods-JLAlertViewUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JLAlertViewUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A147B552F50A8A29789FEB65 /* Pods-JLAlertViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertViewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertViewTests/Pods-JLAlertViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4BB8E5C834D57947A6B6117 /* Pods-JLAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertView/Pods-JLAlertView.debug.xcconfig"; sourceTree = "<group>"; };
+		C71AD044057CC4F62384AB5F /* Pods-JLAlertViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JLAlertViewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JLAlertViewUITests/Pods-JLAlertViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92BEBD1A28A7989699345AC5 /* libPods-JLAlertView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F40C2EF3B25120524DF389 /* libPods-JLAlertViewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E649AABAB4EB259BA958823 /* libPods-JLAlertViewUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +112,8 @@
 				6823162D1D7FB86D00E1F312 /* JLAlertViewTests */,
 				682316381D7FB86E00E1F312 /* JLAlertViewUITests */,
 				682316121D7FB86D00E1F312 /* Products */,
+				69C47D4C4ECFFB9D16C0E9FC /* Pods */,
+				70B9E614AEA7541C17E8B386 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,13 +134,14 @@
 				682316181D7FB86D00E1F312 /* AppDelegate.m */,
 				6823161A1D7FB86D00E1F312 /* ViewController.h */,
 				6823161B1D7FB86D00E1F312 /* ViewController.m */,
-				682316471D7FC41F00E1F312 /* JLAlertController.h */,
-				682316481D7FC41F00E1F312 /* JLAlertController.m */,
+				68A8840F1D800F170050C412 /* JLAlertController */,
 				6823161D1D7FB86D00E1F312 /* Main.storyboard */,
 				682316201D7FB86D00E1F312 /* Assets.xcassets */,
 				682316221D7FB86D00E1F312 /* LaunchScreen.storyboard */,
 				682316251D7FB86D00E1F312 /* Info.plist */,
 				682316141D7FB86D00E1F312 /* Supporting Files */,
+				68A8840C1D8003F80050C412 /* UIColor+Factory.h */,
+				68A8840D1D8003F80050C412 /* UIColor+Factory.m */,
 			);
 			path = JLAlertView;
 			sourceTree = "<group>";
@@ -145,6 +172,42 @@
 			path = JLAlertViewUITests;
 			sourceTree = "<group>";
 		};
+		68A8840F1D800F170050C412 /* JLAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				682316471D7FC41F00E1F312 /* JLAlertController.h */,
+				682316481D7FC41F00E1F312 /* JLAlertController.m */,
+				68A884101D800F540050C412 /* JLAlertView.h */,
+				68A884111D800F540050C412 /* JLAlertView.m */,
+				687A53381D815F0200A378BC /* JLAlertColViewCell.h */,
+				687A53391D815F0200A378BC /* JLAlertColViewCell.m */,
+			);
+			name = JLAlertController;
+			sourceTree = "<group>";
+		};
+		69C47D4C4ECFFB9D16C0E9FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4BB8E5C834D57947A6B6117 /* Pods-JLAlertView.debug.xcconfig */,
+				17EE8AB741859148888844D9 /* Pods-JLAlertView.release.xcconfig */,
+				A147B552F50A8A29789FEB65 /* Pods-JLAlertViewTests.debug.xcconfig */,
+				09BAFF874ECC373454C3F50A /* Pods-JLAlertViewTests.release.xcconfig */,
+				0E57AD39EE4411E2C24019E7 /* Pods-JLAlertViewUITests.debug.xcconfig */,
+				C71AD044057CC4F62384AB5F /* Pods-JLAlertViewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		70B9E614AEA7541C17E8B386 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B20DAC72C34694478A00B3F /* libPods-JLAlertView.a */,
+				0ED96A1BC0995FECA17BD199 /* libPods-JLAlertViewTests.a */,
+				74D2871D3B31986933734AB7 /* libPods-JLAlertViewUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6823163E1D7FB86E00E1F312 /* Build configuration list for PBXNativeTarget "JLAlertView" */;
 			buildPhases = (
+				371F31E0DD5B7E54447B6271 /* [CP] Check Pods Manifest.lock */,
 				6823160D1D7FB86D00E1F312 /* Sources */,
 				6823160E1D7FB86D00E1F312 /* Frameworks */,
 				6823160F1D7FB86D00E1F312 /* Resources */,
+				DF646FC4DE77721D5FC87D06 /* [CP] Embed Pods Frameworks */,
+				E074BA2335BD1CCEC31A4101 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 682316411D7FB86E00E1F312 /* Build configuration list for PBXNativeTarget "JLAlertViewTests" */;
 			buildPhases = (
+				BFE73E6A342C2168DD18E168 /* [CP] Check Pods Manifest.lock */,
 				682316261D7FB86D00E1F312 /* Sources */,
 				682316271D7FB86D00E1F312 /* Frameworks */,
 				682316281D7FB86D00E1F312 /* Resources */,
+				F69A9CC7208006733A9C9E43 /* [CP] Embed Pods Frameworks */,
+				385F1F92D89092C7CCC763C6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 682316441D7FB86E00E1F312 /* Build configuration list for PBXNativeTarget "JLAlertViewUITests" */;
 			buildPhases = (
+				E93C185985DFB4BFEFCF2571 /* [CP] Check Pods Manifest.lock */,
 				682316311D7FB86E00E1F312 /* Sources */,
 				682316321D7FB86E00E1F312 /* Frameworks */,
 				682316331D7FB86E00E1F312 /* Resources */,
+				1AFA9C3DFF595A39916D09B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,13 +341,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1AFA9C3DFF595A39916D09B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLAlertViewUITests/Pods-JLAlertViewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		371F31E0DD5B7E54447B6271 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		385F1F92D89092C7CCC763C6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLAlertViewTests/Pods-JLAlertViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFE73E6A342C2168DD18E168 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF646FC4DE77721D5FC87D06 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLAlertView/Pods-JLAlertView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E074BA2335BD1CCEC31A4101 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLAlertView/Pods-JLAlertView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E93C185985DFB4BFEFCF2571 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F69A9CC7208006733A9C9E43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JLAlertViewTests/Pods-JLAlertViewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6823160D1D7FB86D00E1F312 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A8840E1D8003F80050C412 /* UIColor+Factory.m in Sources */,
 				682316491D7FC41F00E1F312 /* JLAlertController.m in Sources */,
+				687A533A1D815F0200A378BC /* JLAlertColViewCell.m in Sources */,
 				6823161C1D7FB86D00E1F312 /* ViewController.m in Sources */,
+				68A884121D800F540050C412 /* JLAlertView.m in Sources */,
 				682316191D7FB86D00E1F312 /* AppDelegate.m in Sources */,
 				682316161D7FB86D00E1F312 /* main.m in Sources */,
 			);
@@ -417,6 +614,7 @@
 		};
 		6823163F1D7FB86E00E1F312 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4BB8E5C834D57947A6B6117 /* Pods-JLAlertView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JLAlertView/Info.plist;
@@ -428,6 +626,7 @@
 		};
 		682316401D7FB86E00E1F312 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17EE8AB741859148888844D9 /* Pods-JLAlertView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JLAlertView/Info.plist;
@@ -439,6 +638,7 @@
 		};
 		682316421D7FB86E00E1F312 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A147B552F50A8A29789FEB65 /* Pods-JLAlertViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = JLAlertViewTests/Info.plist;
@@ -451,6 +651,7 @@
 		};
 		682316431D7FB86E00E1F312 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09BAFF874ECC373454C3F50A /* Pods-JLAlertViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = JLAlertViewTests/Info.plist;
@@ -463,6 +664,7 @@
 		};
 		682316451D7FB86E00E1F312 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E57AD39EE4411E2C24019E7 /* Pods-JLAlertViewUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = JLAlertViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -474,6 +676,7 @@
 		};
 		682316461D7FB86E00E1F312 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C71AD044057CC4F62384AB5F /* Pods-JLAlertViewUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = JLAlertViewUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -502,6 +705,7 @@
 				682316401D7FB86E00E1F312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		682316411D7FB86E00E1F312 /* Build configuration list for PBXNativeTarget "JLAlertViewTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +714,7 @@
 				682316431D7FB86E00E1F312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		682316441D7FB86E00E1F312 /* Build configuration list for PBXNativeTarget "JLAlertViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +723,7 @@
 				682316461D7FB86E00E1F312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -39,7 +39,7 @@
 
 
 @interface JLAlertController()
-@property (nonatomic, strong) JLAlertView *alertBGView;
+@property (nonatomic, strong) JLAlertView *alertView;
 @property (nonatomic, strong) UIView *darkBGView;
 
 
@@ -74,8 +74,8 @@
     
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.darkBGView.alpha = 0.3;
-        self.alertBGView.alpha = 1;
-        self.alertBGView.transform = CGAffineTransformIdentity;
+        self.alertView.alpha = 1;
+        self.alertView.transform = CGAffineTransformIdentity;
 
     } completion:nil];
 }
@@ -84,12 +84,10 @@
 {
     [super viewDidLoad];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    });
 }
-
-
 
 - (void)setupViews
 {
@@ -101,14 +99,20 @@
     self.darkBGView.userInteractionEnabled = YES;
     self.darkBGView.alpha = 0;
     
-    self.alertBGView = [[JLAlertView alloc] initWithFrame:CGRectZero];
-    self.alertBGView.alpha = 0;
-    self.alertBGView.transform = CGAffineTransformMakeScale(1.2, 1.2);
-    [self.view addSubview:self.alertBGView];
-    [self.alertBGView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.alertView = [[JLAlertView alloc] initWithFrame:CGRectZero title:self.title message:self.message];
+    self.alertView.alpha = 0;
+    self.alertView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+    [self.view addSubview:self.alertView];
+    [self.alertView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.equalTo(@270);
         make.centerY.centerX.equalTo(self.view);
     }];
+    
+    __weak typeof(self) weakSelf = self;
+    self.alertView.ActionBlock = ^(JLAlertAction *action){
+        action.handler(action);
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    };
     
     
 }
@@ -119,6 +123,7 @@
     [actionsArrM addObject:action];
     
     _actions = actionsArrM.copy;
+    self.alertView.actions = _actions;
 }
 
 @end

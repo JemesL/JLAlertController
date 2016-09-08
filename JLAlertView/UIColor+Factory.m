@@ -44,6 +44,11 @@
     return [self convertHexToRGB:hexString alpha:1.0];
 }
 
++ (UIColor *)colorGrayLine
+{
+    return [UIColor convertHexToRGB:@"0xC7C7C7"];
+}
+
 + (UIColor *)colorAlertText
 {
     return [UIColor convertHexToRGB:@"0xA7A7A7"];
