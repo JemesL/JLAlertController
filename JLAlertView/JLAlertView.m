@@ -10,7 +10,7 @@
 #import "UIColor+Factory.h"
 #import "Masonry.h"
 #import "JLAlertColViewCell.h"
-#import "JLAlertController.h"
+
 @interface JLAlertView()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *message;
@@ -82,7 +82,7 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
     self.titleLabel.text = self.title;
     self.messageLabel.text = self.message;
     
-    [self.contentScrollView layoutIfNeeded];
+//    [self.contentScrollView layoutIfNeeded];
 }
 
 - (void)setActions:(NSArray<JLAlertAction *> *)actions
@@ -94,7 +94,6 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
     } else {
         self.actionsColView.collectionViewLayout = self.layout;
     }
-    
 }
 
 #pragma mark -SetupView
@@ -124,15 +123,6 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
     
     [self.contentScrollView addSubview:self.titleLabel];
     [self.contentScrollView addSubview:self.messageLabel];
-    
-//    UIView *line = [[UIView alloc] initWithFrame:CGRectZero];
-//    line.backgroundColor = [UIColor colorGrayLine];
-//    [self addSubview:line];
-//    [line mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.height.equalTo(@1);
-//        make.left.right.equalTo(self);
-//        make.bottom.equalTo(self.contentScrollView);
-//    }];
 }
 
 - (void)setupActionColView
@@ -175,6 +165,8 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
         make.left.right.bottom.equalTo(self);
         make.height.equalTo(@(self.actionsColView.contentSize.height));
     }];
+    
+    NSLog(@"%@",NSStringFromCGSize(self.actionsColView.contentSize));
 }
 
 #pragma mark -UICollectionViewDataSource
@@ -191,6 +183,8 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
         cell = [[JLAlertColViewCell alloc] initWithFrame:CGRectZero];
     }
     cell.title.text = [self.actions[indexPath.item] title];
+    CGFloat margin = (self.preferredStyle == UIAlertControllerStyleAlert) ? 0 : 15;
+    [cell setGrayLineWithMargin:margin hidden:NO];
     return cell;
 }
 

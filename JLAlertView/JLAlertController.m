@@ -10,6 +10,7 @@
 #import "UIColor+Factory.h"
 #import "Masonry.h"
 #import "JLAlertView.h"
+#import "JLSheetView.h"
 @interface JLAlertAction()
 
 @property (nonatomic, copy) void(^handler)(JLAlertAction *action);
@@ -39,9 +40,11 @@
 
 
 @interface JLAlertController()
-@property (nonatomic, strong) JLAlertView *alertView;
+
 @property (nonatomic, strong) UIView *darkBGView;
 
+@property (nonatomic, strong) JLAlertView *alertView;
+@property (nonatomic, strong) JLSheetView *sheetView;
 
 @end
 @implementation JLAlertController
@@ -72,11 +75,45 @@
 {
     [super viewWillAppear:animated];
     
+    switch (self.preferredStyle) {
+        case JLAlertControllerStyleAlert:
+            [self AlertAnimation];
+            break;
+        case JLAlertControllerStyleActionSheet:
+            [self SheetAnimation];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)AlertAnimation
+{
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.darkBGView.alpha = 0.3;
         self.alertView.alpha = 1;
         self.alertView.transform = CGAffineTransformIdentity;
+    } completion:nil];
+}
 
+- (void)SheetAnimation
+{
+    [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(17.5f);
+        make.right.equalTo(self.view).offset(-17.5f);
+        make.top.equalTo(self.view.mas_bottom);
+    }];
+    [self.view layoutIfNeeded];
+    [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(17.5f);
+        make.right.equalTo(self.view).offset(-17.5f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-10.0f);
+    }];
+    
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        self.darkBGView.alpha = 0.3;
+        self.sheetView.alpha = 1;
+        [self.view layoutIfNeeded];
     } completion:nil];
 }
 
@@ -99,7 +136,23 @@
     self.darkBGView.userInteractionEnabled = YES;
     self.darkBGView.alpha = 0;
     
+    switch (self.preferredStyle) {
+        case JLAlertControllerStyleAlert:
+            [self setupAlertView];
+            break;
+        case JLAlertControllerStyleActionSheet:
+            [self setupSheetView];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)setupAlertView
+{
+    self.sheetView = nil;
     self.alertView = [[JLAlertView alloc] initWithFrame:CGRectZero title:self.title message:self.message];
+    self.alertView.preferredStyle = self.preferredStyle;
     self.alertView.alpha = 0;
     self.alertView.transform = CGAffineTransformMakeScale(1.2, 1.2);
     [self.view addSubview:self.alertView];
@@ -113,8 +166,26 @@
         action.handler(action);
         [weakSelf dismissViewControllerAnimated:YES completion:nil];
     };
+}
+
+- (void)setupSheetView
+{
+    self.alertView = nil;
+    self.sheetView = [[JLSheetView alloc] initWithFrame:CGRectZero title:self.title message:self.message];
+    self.sheetView.preferredStyle = self.preferredStyle;
+    self.sheetView.alpha = 0;
+    [self.view addSubview:self.sheetView];
+    [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(17.5f);
+        make.right.equalTo(self.view).offset(-17.5f);
+        make.top.equalTo(self.view.mas_bottom);
+    }];
     
-    
+    __weak typeof(self) weakSelf = self;
+    self.sheetView.ActionBlock = ^(JLAlertAction *action){
+        action.handler(action);
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    };
 }
 
 - (void)addAction:(JLAlertAction *)action
@@ -124,6 +195,7 @@
     
     _actions = actionsArrM.copy;
     self.alertView.actions = _actions;
+    self.sheetView.actions = _actions;
 }
 
 @end
