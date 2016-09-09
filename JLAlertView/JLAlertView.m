@@ -10,7 +10,7 @@
 #import "UIColor+Factory.h"
 #import "Masonry.h"
 #import "JLAlertColViewCell.h"
-#import "JLAlertController.h"
+
 @interface JLAlertView()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *message;
@@ -82,7 +82,7 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
     self.titleLabel.text = self.title;
     self.messageLabel.text = self.message;
     
-    [self.contentScrollView layoutIfNeeded];
+//    [self.contentScrollView layoutIfNeeded];
 }
 
 - (void)setActions:(NSArray<JLAlertAction *> *)actions
@@ -94,13 +94,12 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
     } else {
         self.actionsColView.collectionViewLayout = self.layout;
     }
-    
 }
 
 #pragma mark -SetupView
 - (void)setupView
 {
-//    [self layoutIfNeeded];
+    [self layoutIfNeeded];
     [self setupContentScrollView];
     [self setupActionColView];
 }
@@ -166,6 +165,8 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
         make.left.right.bottom.equalTo(self);
         make.height.equalTo(@(self.actionsColView.contentSize.height));
     }];
+    
+    NSLog(@"%@",NSStringFromCGSize(self.actionsColView.contentSize));
 }
 
 #pragma mark -UICollectionViewDataSource
@@ -182,6 +183,8 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
         cell = [[JLAlertColViewCell alloc] initWithFrame:CGRectZero];
     }
     cell.title.text = [self.actions[indexPath.item] title];
+    CGFloat margin = (self.preferredStyle == UIAlertControllerStyleAlert) ? 0 : 15;
+    [cell setGrayLineWithMargin:margin hidden:NO];
     return cell;
 }
 

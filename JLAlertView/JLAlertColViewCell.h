@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JLAlertController.h"
 @interface JLAlertColViewCell : UICollectionViewCell
 @property (nonatomic, strong) UILabel *title;
-//@property (nonatomic) BOOL isShowVLine;
+
+- (void)setGrayLineWithMargin:(CGFloat)margin hidden:(BOOL)isHidden;
 @end

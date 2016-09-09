@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class JLAlertAction;
+#import "JLAlertController.h"
 @interface JLSheetView : UIView
 
 @property (nonatomic, strong) NSArray<JLAlertAction *> *actions;
 @property (nonatomic, copy) void (^ActionBlock)(JLAlertAction *action);
+@property (nonatomic) JLAlertControllerStyle preferredStyle;
 
 - (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title message:(NSString *)message;
 

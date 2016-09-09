@@ -10,8 +10,10 @@
 #import "Masonry.h"
 #import "UIColor+Factory.h"
 
+
 @interface JLAlertColViewCell()
 @property (nonatomic, strong) UIView *grayView;
+@property (nonatomic, strong) UIView *topGrayLine;
 @end
 @implementation JLAlertColViewCell
 - (instancetype)initWithFrame:(CGRect)frame
@@ -25,7 +27,6 @@
 
 - (void)setupViews
 {
-    
     self.grayView = [[UIView alloc] initWithFrame:CGRectZero];
     self.grayView.backgroundColor = [UIColor colorGrayLine];
     [self addSubview:self.grayView];
@@ -38,12 +39,14 @@
     self.title.backgroundColor = [UIColor clearColor];
     self.title.textAlignment = NSTextAlignmentCenter;
     self.title.textColor = [UIColor colorAlertText];
+    self.title.font = [UIFont systemFontOfSize:14];
     [self addSubview:self.title];
     [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
     
     UIView *topGrayLine = [[UIView alloc] initWithFrame:CGRectZero];
+    self.topGrayLine = topGrayLine;
     topGrayLine.backgroundColor = [UIColor colorGrayLine];
     [self addSubview:topGrayLine];
     [topGrayLine mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -60,21 +63,19 @@
         make.top.equalTo(self).offset(4.0f);
         make.bottom.equalTo(self).offset(-4.0f);
     }];
-    
-    
 }
-//
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    [UIView animateWithDuration:0.1 animations:^{
-//        self.grayView.alpha = 0.4;
-//    }];
-//}
-//
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-//{
-//    [UIView animateWithDuration:0.1 animations:^{
-//        self.grayView.alpha = 0.0;
-//    }];
-//}
+
+- (void)setGrayLineWithMargin:(CGFloat)margin hidden:(BOOL)isHidden
+{
+    self.topGrayLine.hidden = isHidden;
+    [self.topGrayLine mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self);
+        make.left.equalTo(self).offset(margin);
+        make.right.equalTo(self).offset(-margin);
+
+        make.height.equalTo(@1.0);
+    }];
+
+}
+
 @end
