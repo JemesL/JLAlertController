@@ -152,6 +152,7 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
         make.left.right.equalTo(self);
         make.bottom.equalTo(self);
     }];
+    
     [self.cancelViewBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.cancelView);
     }];
@@ -182,5 +183,10 @@ static NSString *JLAlertColViewCellIdentifier = @"JLAlertColViewCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     self.ActionBlock(self.actions[indexPath.item]);
+}
+
+-(void)reload
+{
+    [self.actionsColView reloadData];
 }
 @end

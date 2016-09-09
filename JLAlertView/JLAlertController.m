@@ -98,6 +98,7 @@
 
 - (void)SheetAnimation
 {
+//    [self.view layoutIfNeeded];
     [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(17.5f);
         make.right.equalTo(self.view).offset(-17.5f);
@@ -107,9 +108,14 @@
     [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(17.5f);
         make.right.equalTo(self.view).offset(-17.5f);
+        make.top.equalTo(self.view.mas_bottom).offset(-1);
+    }];
+    [self.view layoutIfNeeded];
+    [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view).offset(17.5f);
+        make.right.equalTo(self.view).offset(-17.5f);
         make.bottom.equalTo(self.view.mas_bottom).offset(-10.0f);
     }];
-    
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.darkBGView.alpha = 0.3;
         self.sheetView.alpha = 1;
@@ -170,17 +176,17 @@
 
 - (void)setupSheetView
 {
+    
     self.alertView = nil;
     self.sheetView = [[JLSheetView alloc] initWithFrame:CGRectZero title:self.title message:self.message];
     self.sheetView.preferredStyle = self.preferredStyle;
-    self.sheetView.alpha = 0;
+    self.sheetView.alpha = 1;
     [self.view addSubview:self.sheetView];
-    [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.view).offset(17.5f);
-        make.right.equalTo(self.view).offset(-17.5f);
-        make.top.equalTo(self.view.mas_bottom);
-    }];
-    
+//    [self.sheetView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.view).offset(17.5f);
+//        make.right.equalTo(self.view).offset(-17.5f);
+//        make.top.equalTo(self.view.mas_bottom);
+//    }];
     __weak typeof(self) weakSelf = self;
     self.sheetView.ActionBlock = ^(JLAlertAction *action){
         action.handler(action);
