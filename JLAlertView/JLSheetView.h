@@ -15,6 +15,6 @@
 @property (nonatomic) JLAlertControllerStyle preferredStyle;
 
 - (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title message:(NSString *)message;
-
+- (void)reload;
 
 @end
